@@ -19,7 +19,6 @@ outline-offset: 3px;
 
 
 .main-link{
-  font-family: "Open Sans Condensed"sans-serif;
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -31,23 +30,30 @@ outline-offset: 3px;
   line-height: 1.5;
   letter-spacing: 2px;
   text-transform: uppercase;
-transition: color 1s ease;
+  transition: color 0.5s ease,
+  background-color 0.2s ease,
+  opacity 0.6s ease;
+}
+
+.main-link:active{
+  opacity: 0.6;
 }
 
 .main-link:hover{
 background-color: #fff;
 border: 2px solid #DE2E54;
 color: #DE2E54;
+margin: 0;
 }
 
-/* .container{
+.container{
     width: 100%;
     max-width:1140px;
     padding-left: 20px;
     padding-right: 20px;
     margin-right: auto;
     margin-left: auto;
-  } */
+  }
 
   /* SITE HEADER */
 
@@ -59,24 +65,40 @@ justify-content: space-between;
 align-items: center;
   }
 
+.site-header-container{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
   .logo-box{
     width: 185px;
     margin: 0;
     padding: 0;
   }
 
+  .logo-box img{
+    margin-right: 16px;
+  }
 
   .logo-box a{
+    display: flex ;
+    align-items: center;
     text-decoration: none;
     color: #000;
     font-weight: 600;
     font-size: 24px;
     line-height: 33px;
     left: 66px;
+    transition: opacity 0.5s ease;
   }
 
   .logo-box a:hover{
     color: #DE2E54;
+  }
+
+  .logo-box a:active{
+    opacity: 0.6;
   }
 
   .sitenav-list{
@@ -107,14 +129,17 @@ line-height: 1.5;
 letter-spacing: 2px;
 text-decoration: none;
 color: #222 ;
-transition: color 0.4s ease, opacity 0.4s ease;
+transition: color 0.4s ease,
+opacity 0.4s ease;
 }
 
 .sitenav-link:hover{
   color: #DE2E54;
   }
 
-
+.sitenav-link:active{
+opacity: 0.6;
+}
 
   .sitenav{
     display: flex;
@@ -130,6 +155,12 @@ transition: color 0.4s ease, opacity 0.4s ease;
     align-items: center;
     justify-content: space-between;
     background-color: #0EB4C1;
+  }
+
+  .hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .hero-content{
@@ -166,8 +197,6 @@ transition: color 0.4s ease, opacity 0.4s ease;
 }
 
 .hero-link{
-  font-family: "Open Sans Condensed"sans-serif;
-  display: inline-block;
   text-decoration: none;
   color: #fff;
   background-color: #DE2E54;
@@ -178,20 +207,29 @@ transition: color 0.4s ease, opacity 0.4s ease;
   line-height: 1.5;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: opacity 0.4s ease;
+  transition: color 0.4s ease,
+ opacity 0.4s ease;
 }
 
 .hero-link:hover{
 opacity: 0.8;
 }
 
-
+.hero-link:active{
+  opacity: 0.6;
+}
 
 
 /* SERVICE SECTION */
 
 .service{
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,6 +318,12 @@ padding: 0;
   flex-direction: column;
 }
 
+.cta-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .cta-heading{
  font-family: "Open Sans Condensed", "Open Sans", sans-serif;
   width: 500px;
@@ -312,11 +356,17 @@ margin: 0;
   line-height: 1.2;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition: opacity 0.4s ease,
+  background-color 0.4s ease;
 }
 
 .cta-link:hover{
 background-color: #DE2E54;
 border: 2px solid #DE2E54;
+}
+
+.cta-link:active{
+  opacity:0.6;
 }
 
 .cta-link:last-child{
@@ -345,23 +395,33 @@ margin-right: 0;
 
 .footer-logo{
   width: 185px;
-  display: flex;
-  justify-content: center;
-  align-items:center ;
 }
 
 .footer-logo a{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
   text-decoration: none;
   font-family: "Open Sans" sans-serif;
   color: #fff;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 24px;
   line-height: 33px;
-  transition: color 0.4s ease, opacity 0.4s ease;
+  transition: color 0.4s ease,
+  opacity 0.4s ease;
 }
 
 .footer-logo a:hover{
 color: #DE2E54;
+}
+
+.footer-logo a:active{
+color: #ffffff;
+opacity: 0.6;
+}
+
+.footer-logo img{
+  margin-right: 16px;
 }
 
 .footer-link{
@@ -382,6 +442,11 @@ color: #DE2E54;
 
 .footer-link a:hover{
   color: #DE2E54;
+}
+
+.footer-link a:active{
+  color: #ffffff;
+  opacity: 0.6;
 }
 
 .footer-item{
